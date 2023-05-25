@@ -1,10 +1,157 @@
 @import "reset.css";
 @import "general.css";
-@import "colors.css"
+@import "colors.css";
 
 /* Home */
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.button{
+    background-color: rgba(8, 11, 18, 0.7);
+    border: 1px solid white;
+    padding: .625rem 1.25rem;
+    border-radius: 3.125rem;
+}
 
 /* Header */
+header .container {
+    background-color: rgba(8, 11, 18, 0.7);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+header .container .upgrade{
+    display: flex;
+    justify-content: end;
+    
+}
+
+header .container a {
+    color: white;
+    display: inline-block;
+    text-align: center;
+    margin: .625rem 0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: small;
+}
+/* Fine Header */
+
+/* Main */
+
+/* First Section */
+
+main .container {
+    background-color: var(--background-color);
+    height: 100%;
+}
+
+main .container nav {
+    
+}
+
+main .container ul {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 1.25rem;
+}
+
+main .container li {
+    list-style: none;
+    display: inline;
+    padding: 10px 5px;
+}
+
+main .container a {
+    text-decoration: none;
+    color: lightgray;
+    font-size: small;
+}
+
+main .container h2 {
+    color: white;
+    font-weight: 700;
+    font-size: large;
+    margin-bottom: 1.25rem;
+    margin-left: .625rem;
+}
+
+.first-section .row-album {
+    margin-bottom: 1.875rem;
+}
+
+.container .row-album {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container .row-album .col-album {
+    margin: 0 .625rem;
+}
+
+.first-section .container .row-album .col-album {
+    width: calc(100% / 6);
+}
+
+.container .row-album .col-album img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.container .row-album .col-album h4 {
+    color: white;
+    font-weight: 700;
+    text-align: center;
+}
+
+.container .row-album .col-album h6 {
+    color: darkgray;
+    font-weight: 600;
+    font-size: small;
+    text-align: center;
+}
+/* End First Section */
+
+/* Second Section */
+main .second-section h2 {
+    margin-bottom: 0;
+
+}
+main .second-section h6 {
+    margin-top: .625rem;
+    margin-bottom: 1.25rem;
+    color: darkgray;
+    font-weight: 600;
+    font: size 8px;
+    margin-left: 10px;
+}
+/* End Second Section */
+
+/* Third Section */
+main .third-section .col-album img {
+    border-radius: 50%;
+}
+
+main .third-section h6 {
+    margin-top: .625rem;
+    margin-bottom: 1.25rem;
+    color: darkgray;
+    font-weight: 600;
+    font: size 8px;
+    margin-left: 10px;
+}
+
+/* End Third Section */
+
+/* Fine Main */
+
+/* Footer */
 
 
 
@@ -19,6 +166,20 @@
 
 /* Debug */
 
+.debug {
+    height: 90vh;
+    border: 1px;
+}
+
+.debug-footer {
+    height: 10vh;
+    background-color:#282828;
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+}
 
 
 
