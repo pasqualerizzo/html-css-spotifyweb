@@ -4,8 +4,8 @@
 
 /* Home */
 .container{
-    max-width: 100%;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .button{
@@ -22,12 +22,12 @@ header .container {
     top: 0;
     right: 0;
     left: 0;
+    margin-left: 200px;
 }
 
 header .container .upgrade{
     display: flex;
     justify-content: end;
-    
 }
 
 header .container a {
@@ -43,30 +43,153 @@ header .container a {
 
 /* Main */
 
+main {
+    display: flex;
+}
+
+.main-section{
+    width: 100%;
+    display: flex;
+}
+
+/* Aside */
+
+aside {
+    width: 200px;
+    background-color: black;
+    padding: 0 .9375rem;
+}
+
+.logo {
+    padding: .9375rem;
+}
+
+.logo img{
+    height: 30px;
+}
+
+.gray-filtered {
+    filter: invert(0.5) sepia(70) saturate(0) hue-rotate(0);
+}
+
+.menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: gray;
+    font-weight: 600;
+    font-size: 12px
+}
+
+.menu img {
+    width: 25px;
+    height: 25px;
+}
+
+.menu-playlist .plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    width: 30px;
+    height: 30px;
+    margin-right: .625rem;
+}
+
+.menu-playlist h4 {
+    color: white;
+    margin-top: 1.25rem;
+    margin-bottom: .3125rem;
+}
+
+.menu-playlist li {
+    line-height: 30px;
+}
+
+.menu-playlist a {
+    text-decoration: none;
+    font-weight: 500;
+    color: gray;
+    font-size: 12px
+}
+
+.row-playlist {
+    display: flex;
+    align-items: center;
+}
+
+.user hr {
+    margin: .3125rem 0;
+    border: gray 1px solid;
+}
+
+.install {
+    display: flex;
+}
+
+.install img{
+    width: 15px;
+    height: 15px;
+    margin-right: .625rem;
+}
+
+.install a{
+    color: gray;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.personal-profile {
+    display: flex;
+}
+
+.profile-icon {
+    background-color: gray;
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    margin-right: .625rem;
+}
+
+.personal-profile img{
+    border-radius: 100px;
+}
+
+.personal-profile a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+    line-height:28px
+}
+
+/* Fine Aside */
+
 /* First Section */
+
+main {
+    height: calc(100vh - 100px);
+}
 
 main .container {
     background-color: var(--background-color);
+    width: calc(100% - 200px);
     height: 100%;
+    overflow: auto;
 }
 
-main .container nav {
-    
-}
-
-main .container ul {
+main .first-section ul {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 1.25rem;
 }
 
-main .container li {
+main .first-section li {
     list-style: none;
     display: inline;
     padding: 10px 5px;
 }
 
-main .container a {
+main .first-section a {
     text-decoration: none;
     color: lightgray;
     font-size: small;
@@ -76,8 +199,17 @@ main .container h2 {
     color: white;
     font-weight: 700;
     font-size: large;
+}
+
+main .first-section h2 {
+    color: white;
+    font-weight: 700;
+    font-size: large;
     margin-bottom: 1.25rem;
-    margin-left: .625rem;
+}
+
+.first-section {
+    margin-top: 3.625rem;
 }
 
 .first-section .row-album {
@@ -88,19 +220,21 @@ main .container h2 {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -10px;
 }
 
-.container .row-album .col-album {
-    margin: 0 .625rem;
+.row-album .col-album {
+    width: calc((100% / 6) - 20px);
+    margin: 0 10px;
 }
 
-.first-section .container .row-album .col-album {
-    width: calc(100% / 6);
+.first-section .row-album .song-description{
+    width: 100%;
 }
+
 
 .container .row-album .col-album img {
-    width: 150px;
-    height: 150px;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -116,20 +250,16 @@ main .container h2 {
     font-size: small;
     text-align: center;
 }
+
 /* End First Section */
 
 /* Second Section */
-main .second-section h2 {
-    margin-bottom: 0;
-
-}
 main .second-section h6 {
     margin-top: .625rem;
     margin-bottom: 1.25rem;
     color: darkgray;
     font-weight: 600;
     font: size 8px;
-    margin-left: 10px;
 }
 /* End Second Section */
 
@@ -144,7 +274,10 @@ main .third-section h6 {
     color: darkgray;
     font-weight: 600;
     font: size 8px;
-    margin-left: 10px;
+}
+
+.second-section {
+    padding: 1.875rem 0;
 }
 
 /* End Third Section */
@@ -152,7 +285,15 @@ main .third-section h6 {
 /* Fine Main */
 
 /* Footer */
-
+.footer {
+    height: 100px;
+    background-color:#282828;
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+}
 
 
 
