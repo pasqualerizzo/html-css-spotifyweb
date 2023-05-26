@@ -58,6 +58,7 @@ aside {
     width: 200px;
     background-color: black;
     padding: 0 .9375rem;
+    position: relative;
 }
 
 .logo {
@@ -116,6 +117,13 @@ aside {
     display: flex;
     align-items: center;
 }
+.user {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    right: 15px;
+}
+
 
 .user hr {
     margin: .3125rem 0;
@@ -285,7 +293,7 @@ main .third-section h6 {
 /* Fine Main */
 
 /* Footer */
-.footer {
+.footer-player {
     height: 100px;
     background-color:#282828;
     position: sticky;
@@ -293,6 +301,27 @@ main .third-section h6 {
     right: 0;
     left: 0;
     z-index: 2;
+}
+
+.row-player {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-left-player {
+    width: 25%;
+}
+
+.col-left-player img {
+    
+}
+
+.col-center-player {
+    width: 50%;
+}
+
+.col-right-player {
+    width: 25%;
 }
 
 
