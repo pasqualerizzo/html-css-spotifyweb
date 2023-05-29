@@ -39,6 +39,12 @@ header .container a {
     font-weight: 500;
     font-size: small;
 }
+
+header a:hover {
+    content: "";
+    transform: scale(1.1);
+}
+
 /* Fine Header */
 
 /* Main */
@@ -71,8 +77,17 @@ aside {
     height: 30px;
 }
 
+.logo img:last-child{
+    display: none;
+}
+
 .gray-filtered {
     filter: invert(0.5) sepia(70) saturate(0) hue-rotate(0);
+}
+
+.menu a:hover {
+    content: "";
+    color: white;
 }
 
 .menu a {
@@ -121,6 +136,11 @@ aside {
     font-size: 12px
 }
 
+.menu-playlist a:hover {
+    content: "";
+    color: white;
+}
+
 .row-playlist {
     display: flex;
     align-items: center;
@@ -151,6 +171,11 @@ aside {
     color: gray;
     text-decoration: none;
     font-size: 12px;
+}
+
+.install a:hover{
+    content: "";
+    color: white;
 }
 
 .personal-profile {
@@ -208,6 +233,18 @@ main .first-section a {
     text-decoration: none;
     color: lightgray;
     font-size: small;
+}
+
+main .first-section a div {
+    height: .1875rem;
+    color: lightgreen;
+    width: 25%;
+    display: inline-block;
+}
+
+main .first-section a:hover {
+    content: "";
+    color: white;
 }
 
 main .container h2 {
@@ -346,6 +383,13 @@ main .third-section h6 {
     color: gray;
 }
 
+.col-left-player .song-name h6:hover {
+    content: "";
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .col-left-player .add-favorite {
     align-self: center;
 }
@@ -355,8 +399,17 @@ main .third-section h6 {
     text-decoration: none;
 }
 
+.col-left-player .add-favorite i{
+    color: #707070;
+}
+
+.col-left-player .add-favorite i:hover{
+    content: "";
+    color: white;
+}
+
 .col-center-player {
-    width: 50%;
+    width: 30%;
 }
 
 .col-center-player .player-button {
@@ -368,14 +421,20 @@ main .third-section h6 {
 
 .col-center-player .player-button button {
     background-color: transparent;
-    font-size: 20px;
     border: none;
     margin: 10px 15px;
+    cursor: pointer;
 }
 
 
 .col-center-player .player-button button:nth-child(3) {
     font-size: 30px;
+}
+
+.col-center-player .player-button button:nth-child(3) i:hover {
+    content: "";
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 .col-center-player .timeline {
@@ -396,16 +455,64 @@ main .third-section h6 {
     border-radius: 10px;
 }
 
+.col-center-player .timeline .progressive-song-bar:hover{
+    content: "";
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+.col-center-player .timeline .progressive-song-bar::before{
+    
+}
+
 .col-center-player .timeline .progressive-song-bar{
     background-color: white;
     width: 33%;
     height: 100%;
 }
 
-
 .col-right-player {
     width: 25%;
+    display: flex;
 }
+
+.col-right-player .option-song {
+    width: 50%;
+    align-self: center;
+    display: flex;
+    justify-content: end
+}
+
+.col-right-player .option-song button{
+    background-color: transparent;
+    border: none;
+    margin-left: 15px;
+    font-size: 1rem;
+}
+
+.col-right-player .full-volume-song {
+    background-color: gray;
+    width: 50%;
+    margin: 0 .9375rem;
+    height: 5px;
+    align-self: center;
+    border-radius: 10px;
+}
+
+.progressive-volume-bar{
+    background-color: white;
+    width: 33%;
+    height: 100%;
+}
+
+.progressive-volume-bar:hover{
+    content: "";
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+
+
 
 
 
@@ -445,38 +552,80 @@ main .third-section h6 {
 
 /* Desktop-First */
 
-/* DESKTOP */
-/* @media screen and (max-width: 992px) {
-    
-} */
-
 /* TABLET */
-/* @media screen and (max-width: 768px) {
-    
-} */
+@media screen and (max-width: 1100px) {
+    .row-album .col-album {
+        width: calc((100% / 4) - 20px);
+        margin: 0 10px;
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width: 700px) {
+    .row-album .col-album {
+        width: calc((100% / 2) - 20px);
+        margin: 0 10px;
+    }
+}
 
 /* MOBILE PICCOLO */
-/* @media screen and (min-width: 576px) {
+@media screen and (max-width: 600px) {
+    aside {
+        width: 50px;
+        padding: 10px 0;
+        align-items: center;
+    }
+    .logo img:first-child{
+        display: none;
+    }
+    .logo {
+        padding: 0 0;
+        margin-bottom: 5px;
+    }
+     
+    .logo img:last-child{
+        display: block;
+    }
 
-} */
+    .menu ul li a span {
+        display: none;
+    }
 
+    .menu-playlist h4 {
+        display: none;
+    }
+    .menu-playlist ul {
+        display: none;
+    }
+    .user hr {
+        display: none;
+    }
 
+    .install a {
+        display: none;
+    }
 
-/* Mobile-First */
+    .install img {
+        transform: scale(1.5);
+        margin: 13px 3px;
+    }
+    .personal-profile a {
+        display: none;
+    }
 
-/* MOBILE PICCOLO */
-/* @media screen and (min-width: 576px) {
+    .profile-icon {
+        margin: 0 0;
+        text-align: center;
+    }
 
-} */
+    main .container {
+        width: calc(100% - 50px);
+    }
 
-/* TABLET */
-/* @media screen and (min-width: 768px) {
-    
-} */
+    header .container {
+        margin-left:50px
+    }
+}
 
-/* DESKTOP */
-/* @media screen and (min-width: 992px) {
-    
-} */
 
 
